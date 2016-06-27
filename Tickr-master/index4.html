@@ -1,0 +1,43 @@
+<html>
+  <head>
+  	<title>Tickr</title>
+    	<!-- Bootstrap core CSS -->
+      <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Custom styles for this template -->
+      <link href="./css/signin.css" rel="stylesheet">
+          
+          <style>
+              h2,h4 { text-align:center }
+              </style>
+  </head>
+  <body>
+      
+    <body style="background-color:#222222;">
+  	<div class="container">
+
+        <form class="form-signin" method="POST" action="signin.php">
+          <h2 class="form-signin-heading"><font color="white">Manual Reset</h2></font>
+          
+          <h4 class="form-signin-heading">
+              <font color="purple">Reset</font>
+              <font color="red">your</font>
+              <font color="orange"> Password</font></h2>
+          
+          <label for="oldpassword" class="sr-only">Current</label>
+          <input type="password" id="oldpassword" class="form-control" placeholder="Old Password" required>
+              
+            <label for="newpassword" class="sr-only">New</label>
+            <input type="password" id="newpassword" class="form-control" placeholder="New Password" required>
+                  
+            <label for="reenternew" class="sr-only">RetypeNew</label>
+            <input type="password" id="reenternew" class="form-control" placeholder="Retype New Password" required>
+                      
+                      
+          <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Send New Password to Email</button>
+          <a href="index.html">Sign in</a></p>
+
+        </form>
+      </div> <!-- /container -->
+  </body>
+</html>

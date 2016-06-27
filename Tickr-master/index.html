@@ -1,0 +1,86 @@
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <head>
+  	<title>Tickr</title>
+    	<!-- Bootstrap core CSS -->
+      <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Custom styles for this template -->
+      <link href="./css/signin.css" rel="stylesheet">
+          
+        <style>
+            h2  {
+                text-align: center;
+                }
+        </style>
+          
+  </head>
+  <script>
+    $(document).ready(function() { //display error message when fields are blank
+      $('#signInButton').on('click', function(e) {
+        if ( $('#email').val() == '' && $('#password').val() == '' ){
+          console.log('test');
+          $('#errors').html('Error: fields are blank');
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
+  <!--<script type="text/javascript">
+    $(document).ready(function() {
+      $('#signInButton').click(function() {
+        alert("first alert");
+        $.ajax({
+          type: 'POST',
+          data: {
+            email: $('#email').val(),
+            password: $('#password').val(),
+            action: 'signIn'
+          },
+          dataType: 'text',
+          url: 'ajaxCalls.php',
+          success: function(data) {
+            alert("Success!");
+            var result = data;
+            alert(result);
+          },
+        });
+      });
+    });
+  </script>-->
+  <body>
+      
+    <body style="background-color:#222222;">
+  	<div class="container">
+
+       <form class="form-signin" method="POST" action="signin.php">
+       <!--<form class="form-signin">-->
+          <h2 class="form-signin-heading"><font color="white">Tickr</h2></font>
+          <div id="errors"></div>
+          <h4 class="form-signin-heading">
+              <font color="white">Enter your
+                  <font color="purple">email</font> and
+                  <font color="red">password</font> to
+                  <font color="orange"> sign in</font></h2>
+              </font>
+          
+          <label for="inputEmail" class="sr-only" >Email address</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Email address" autofocus>
+          <label for="inputPassword" class="sr-only" >Password</label>
+          <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+          <button class="btn btn-lg btn-primary btn-block" id="signInButton">Sign in</button>
+          
+          
+          <a href="index2.html">Register</a></p>
+          <a href="index3.html">Forgot Password?</a></p>
+          <a href="index4.html">Change Password</a></p>
+
+
+
+        </form>
+      </div> <!-- /container -->
+  </body>
+</html>
+
+
+<!--$http.post('SignInData/testSignIn2.php', {email: email, password: password);-->
